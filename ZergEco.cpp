@@ -45,7 +45,7 @@ int main() {
 			cout << "ROI of a Spire: " << spireROI(numSpires, numSpawners, spireCost) << endl;
 			cout << "ROI of a Strike: " << strikeROI(numSpires, numSpawners, strikeCost) << endl;
 			cout << "ROI of a Ling: " << lingROI(numSpires, numSpawners, lingCost) << endl;
-			cout << "Eco increase from a spire: " << eco(numSpires+1, numSpawners) - eco(numSpires, numSpawners) <<endl;
+			cout << "Eco increase from a spire: " << eco(numSpires+1, numSpawners) - eco(numSpires, numSpawners) << endl;
 			if ((supplyCount == 3) && (isStrikeWorth(numSpires, numSpawners, strikeCost) == false))
 				break;
 			else {
@@ -214,7 +214,7 @@ bool isStrikeWorth(int numSpires, int numSpawners, double strikeCost) {
 		double spireCostRef;
 		double lingCostRef;
 		double strikeCostRef;
-		supplyLevelRef += supplyLevel;
+		supplyLevelRef = supplyLevel+1;
 		spireCostRef = 220 + (supplyCostCalc(supplyLevelRef)/3);
 		lingCostRef = 70 + (supplyCostCalc(supplyLevelRef)/11.25);
 		strikeCostRef = 90 + (supplyCostCalc(supplyLevelRef)/15);
